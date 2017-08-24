@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p id="txt">这是一个p标签</p>
+</body>
+</html>
+<script>
+/*需求：将p标签里的文字改变*/
+/*思路：
+* 1.获取元素*/
+    var oTxt = document.getElementById("txt");
+/*2.用innerHTML修改oTxt里的内容*/
+oTxt.innerHTML = "<"+"strong"+">"+"hello word"+"<"+"/strong"+">";
+
+</script>
