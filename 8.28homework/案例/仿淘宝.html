@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,ul,li{margin: 0;padding:0;}
+       #box{
+           width: 705px;
+           height: 300px;
+           margin:100px auto;
+       }
+        #box ul{
+            list-style: none;
+        }
+        #box ul li {
+            float: left;
+            width: 140px;
+            height: 300px;
+            border:1px solid #999999;
+            margin-left:-1px;
+            position: relative;
+        }
+        #box ul li:hover{
+            border-color: red;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <ul>
+            <li id="li1"></li>
+            <li id="li2"></li>
+            <li id="li3"></li>
+            <li id="li4"></li>
+            <li id="li5"></li>
+        </ul>
+    </div>
+</body>
+</html>

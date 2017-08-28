@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+       #box{
+            width: 200px;
+            height: 200px;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <form action="">
+        <input type="button" id="btn" value="改变宽度">
+    </form>
+</body>
+</html>
+<script>
+    var oBox = document.getElementById("box");
+    var oBtn = document.getElementById("btn");
+    oBtn.onclick = function () {
+        oBox.style.width = "300px";
+    }
+</script>

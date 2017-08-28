@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 160px;
+            height: 170px;
+            background: url("img/jd1.png");
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>
+<script>
+    var oBox  = document.getElementById("box");
+    oBox.onmouseover = function () {
+        this.style.background = "url(img/jd2.png)";
+    }
+    oBox.onmouseout = function () {
+        this.style.background = "url(img/jd1.png)"
+    }
+</script>

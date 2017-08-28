@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+    //全局变量
+    var num = 10;
+    function fn(){
+        console.log(num);
+        result = 20;
+    }
+    //调用函数
+    fn();
+    console.log(result);
+    //全局变量
+    var a = 1
+    function func() {
+        //全局变量
+        a = b = 2
+    }
+    func()
+    alert(a);
+    alert(b);
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input{
+            float: left;
+            outline: none;
+        }
+        #search{
+            background: url("img/left.jpg");
+            width: 206px;
+            height: 40px;
+            color: #ccc;
+            padding-left:10px;
+            line-height: 40px;
+        }
+        #btn{
+            background: url("img/right.jpg");
+            width: 42px;
+            height: 40px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<form action="">
+    <input type="text" id="search" value="请输入...">
+    <input type="button" id="btn" value="">
+</form>
+</body>
+</html>
+<script>
+    function getId(id) {
+        return document.getElementById(id);
+    }
+    var oSearch = getId("search");
+    oSearch.onfocus = function () {
+        if(oSearch.value == "请输入..."){
+            this.value = "";
+            this.style.color = "#000";
+        }
+    }
+    oSearch.onblur = function () {
+        if(oSearch.value == ""){
+            this.value = "请输入...";
+            this.style.color = "#ccc"
+        }
+    }
+</script>
