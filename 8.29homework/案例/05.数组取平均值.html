@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+/*    var arr = [1,2,3,4,5,6];
+    var sum = 0;
+    for (var i = 0, leg =arr.length; i < leg; i++){
+        sum = sum + arr[i];
+    }
+    console.log(sum/arr.length);*/
+    var arr = [10,20,30,40,50];
+    function avg(array) {
+        var len = array.length;
+        var sum = 0;
+        for (var i = 0;i<len;i++){
+            sum+=array[i];
+        }
+        return sum/len;
+    }
+    console.log(avg(arr));
+</script>
+</body>
+</html>

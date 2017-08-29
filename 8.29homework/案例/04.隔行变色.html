@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>隔行变色</title>
+    <style>
+        body,ul,li,span{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            width: 250px;
+            border:1px solid #ff6600;
+            margin:100px auto;
+        }
+        .box ul{
+            list-style: none;
+            width: 250px;
+        }
+        .box ul li {
+            height: 35px;
+            padding:5px;
+            line-height: 35px;
+            text-align: center;
+        }
+        span{
+            margin-right: 10px;
+        }
+        .box li.even{background-color: pink;}
+        .box li.odd{background-color: #795da3;}
+    </style>
+</head>
+<body>
+    <div class="box">
+        <ul>
+            <li><span>上证指数</span><span>3641</span><span>10-5</span><span>0.16%</span></li>
+            <li><span>上证指数</span><span>3641</span><span>10-5</span><span>0.16%</span></li>
+            <li><span>上证指数</span><span>3641</span><span>10-5</span><span>0.16%</span></li>
+            <li><span>上证指数</span><span>3641</span><span>10-5</span><span>0.16%</span></li>
+            <li><span>上证指数</span><span>3641</span><span>10-5</span><span>0.16%</span></li>
+            <li><span>上证指数</span><span>3641</span><span>10-5</span><span>0.16%</span></li>
+            <li><span>上证指数</span><span>3641</span><span>10-5</span><span>0.16%</span></li>
+            <li><span>上证指数</span><span>3641</span><span>10-5</span><span>0.16%</span></li>
+            <li><span>上证指数</span><span>3641</span><span>10-5</span><span>0.16%</span></li>
+            <li><span>上证指数</span><span>3641</span><span>10-5</span><span>0.16%</span></li>
+        </ul>
+    </div>
+</body>
+</html>
+<script>
+    var lis = document.getElementsByTagName("li");//获取li标签
+    //改变背景颜色
+    for (var i = 0; i<lis.length;i++){
+        if(i%2 == 0){
+            lis[i].className = "even";
+        }else{
+            lis[i].className = "odd";
+        }
+        lis[i].onmouseover = function () {
+            this.style.backgroundColor = 'orange';
+        }
+        lis[i].onmouseout = function () {
+            this.style.backgroundColor = '';
+        }
+    }
+
+</script>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" value="" id="text">
+<button>点击</button>
+</body>
+</html>
+<script>
+        var text = document.getElementById("text");
+        var btn = document.getElementsByTagName("button")[0];
+        btn.onclick = function () {
+            var num = Number(text.value);
+            alert(num + num);
+        }
+</script>
