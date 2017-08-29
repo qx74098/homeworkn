@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>title</title>
+</head>
+<body>
+<a href="#" aa="0">sdad</a>
+<a href="#" aa="1">dwew</a>
+<a href="#" aa="2">dfwq</a>
+</body>
+</html>
+<script>
+    var oA = document.getElementsByTagName("a");
+    for(var i = 0;i<oA.length;i++){
+        oA[i].onclick = function () {
+            alert(this.aa);
+        }
+    }
+</script>

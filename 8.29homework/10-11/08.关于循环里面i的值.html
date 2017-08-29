@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>
+<script>
+    var oDiv = document.getElementsByTagName("div");
+    var i = 0;
+    while(i<oDiv.length){
+        oDiv[i].onclick = function () {
+            alert(i);
+        }
+        i++;
+    }
+</script>

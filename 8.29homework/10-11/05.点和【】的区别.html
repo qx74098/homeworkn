@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box{
+            width: 100px;
+            height: 100px;
+            background: orange;
+        }
+    </style>
+</head>
+<body>
+<div id="box"></div>
+</body>
+</html>
+<script>
+    var oBox = document.getElementById("box");
+    var a = 'width';
+    oBox.onclick = function () {
+        this.style[a] = '300px';
+//        this.style.width = '300px';
+    }
+</script>

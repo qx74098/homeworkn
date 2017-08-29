@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background: red;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <div>我是一个div</div>
+</body>
+</html>
+<script>
+    var oDiv = document.getElementsByTagName("div");
+    oDiv[0].onclick = function () {
+        alert(this.innerHTML);
+    }
+</script>

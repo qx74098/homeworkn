@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .demo{
+            background-color: #63a35c;
+        }
+    </style>
+</head>
+<body>
+<button>思想原理</button>
+<button>思想原理</button>
+<button>思想原理</button>
+<button>思想原理</button>
+<button>思想原理</button>
+<button>思想原理</button>
+</body>
+</html>
+<script>
+    var btns = document.getElementsByTagName("button");
+    for (var i=0;i<btns.length;i++){
+        btns[i].index = i;
+        btns[i].onclick = function () {
+            alert(this.index);
+            for(var j=0;j<btns.length;j++){
+                btns[j].className = '';
+            }
+         this.className = 'demo';
+        }
+    }
+</script>

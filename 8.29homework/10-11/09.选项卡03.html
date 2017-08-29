@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box1 {
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            border: #000 2px solid;
+            font-family: "微软雅黑";
+        }
+        #box1 a {
+            display: block;
+            float: left;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background: green;
+            color: #fff;
+            text-decoration:none;
+        }
+        #box1 div {
+            width: 300px;
+            height: 260px;
+            line-height:260px;
+            text-align: center;
+            font-size:40px;
+            display: none;
+        }
+        #box1 a.active {
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+<div id="box1">
+    <a href="#" class="active">按钮1</a>
+    <a href="#" >按钮2</a>
+    <a href="#" >按钮3</a>
+    <div style="display:block;">div1</div>
+    <div>div2</div>
+    <div>div3</div>
+</div>
+</body>
+</html>
+<script>
+    var oBox = document.getElementById("box1");
+    var aBtn = document.getElementsByTagName("a");
+    var aDiv = document.getElementsByTagName("div");
+    for(var i= 0;i<aBtn.length;i++){
+        aBtn[i].index = i;
+        aBtn[i].onclick = function () {
+            for(var i = 0;i<aBtn.length;i++){
+                aBtn[i].className = '';
+                aDiv[i].style.display = 'none';
+            }
+            this.className = 'active';
+            aDiv[this.index].style.display = 'block';
+        }
+    }
+</script>
