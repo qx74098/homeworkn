@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0;padding:0;}
+        #div1{
+            width: 400px;
+            height: 350px;
+            border:1px solid black;
+        }
+        #div1 p{
+            padding-left:30px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <input type="text" value="" id="txt">
+    <input type="button" value="发送" id="btn">
+</body>
+</html>
+<script>
+    /*需求：在文本框输入文字，点击发送，文字及姓名出现在上方聊天栏里*/
+    /*思路：*/
+    /*给人物起一个名字*/
+    var names = "Q";
+    /*1.获取元素。*/
+    var oDiv1 = document.getElementById("div1");
+    var oBtn = document.getElementById("btn");
+    var oTxt = document.getElementById("txt");
+    /*2.点击发送按钮事件*/
+    oBtn.onclick = function (){
+        oDiv1.innerHTML = oDiv1.innerHTML+"<span>"+names+"</span>"+"<p>"+oTxt.value+"</p>"
+        oTxt.value = "";
+    }
+
+</script>
