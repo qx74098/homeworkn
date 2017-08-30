@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<a href="javascript:;" aa="0">asdf</a>
+<a href="javascript:;" aa="1">asdf</a>
+<a href="javascript:;" aa="2">asdf</a>
+</body>
+</html>
+<script>
+    var oA = document.getElementsByTagName("a");
+    for(var i = 0;i<oA.length;i++){
+        oA[i].onclick = function () {
+            alert(this.aa);
+        }
+    }
+
+</script>

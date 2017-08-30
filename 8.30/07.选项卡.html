@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,ul,li,div,span{margin: 0;padding: 0;}
+        ul{list-style-type: none;}
+        .news{
+            width: 300px;
+            height: 300px;
+            border:1px solid #ccc;
+            margin:100px auto;
+            overflow: hidden;
+        }
+        .news .mt{
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+        }
+        .news .mt span{
+            display: block;
+            float: left;
+            width: 100px;
+            text-align: center;
+            background-color: #795da3;
+            cursor: pointer;
+        }
+        .news .bt ul {
+            overflow: hidden;
+        }
+        .news .bt ul li{
+            height: 264px;
+            border-top: 1px solid #cccccc;
+            text-align: center;
+            line-height: 264px;
+        }
+        .news .mt .bg{
+            background-color: #ff6600;
+        }
+    </style>
+</head>
+<body>
+    <div class="news">
+        <div class="mt">
+            <span>选项1</span>
+            <span>选项2</span>
+            <span>选项3</span>
+        </div>
+        <div class="bt">
+            <ul>
+                <li>div1</li>
+                <li>div2</li>
+                <li>div3</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var oBtn = document.getElementsByTagName("div")[1].getElementsByTagName("span");
+    var lis = document.getElementsByTagName("div")[2].getElementsByTagName("li");
+    for (var i = 0;i<oBtn.length;i++){
+        oBtn[i].index = i;
+        oBtn[i].onclick = function () {
+            for(var i = 0; i<oBtn.length;i++){
+                oBtn[i].className = '';
+               lis[i].style.display = 'none';
+            }
+            this.className = 'bg';
+            lis[this.index].style.display = 'block';
+        }
+    }
+
+</script>

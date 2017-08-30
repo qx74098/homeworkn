@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+            border:1px solid #cccccc;
+            background: red;
+            color: #ACFFAC;
+        }
+    </style>
+</head>
+<body>
+<div>我是一个div</div>
+</body>
+</html>
+<script>
+    var aDiv = document.getElementsByTagName("div");
+    aDiv[0].onclick = function () {
+        alert(this.innerHTML);
+    }
+</script>

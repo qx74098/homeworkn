@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body,ul,li,span{
+            margin:0;
+            padding:0;
+        }
+        #box{
+            width: 655px;
+            height: 357px;
+            border:1px solid #cccccc;
+            overflow: hidden;
+            margin:50px auto;
+        }
+        #box2{
+            float: left;
+        }
+        #box2 ul li {
+            display: none;
+        }
+        #box3{
+            text-align: center;
+            float: left;
+            border-left:1px solid #ccc;
+            background-color: #211821;
+            color: white;
+        }
+        #box3 span{
+            display: block;
+            height: 70px;
+            line-height: 70px;
+            border-bottom: 1px solid #cccccc;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        #box3 .bn{border-bottom: none;}
+        #box3 .pink {
+            background-color: #f7528c;
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div id="box2">
+            <ul>
+                <li style="display: block"><img src="img/1.png" alt=""></li>
+                <li><img src="img/2.png" alt=""></li>
+                <li><img src="img/3.jpg" alt=""></li>
+                <li><img src="img/4.jpg" alt=""></li>
+                <li><img src="img/5.png" alt=""></li>
+            </ul>
+        </div>
+        <div id="box3">
+            <span>时髦新品</span>
+            <span>简约之美</span>
+            <span>HOLLOW风潮</span>
+            <span>"公主病"万岁</span>
+            <span class="bn">纯棉立体</span>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    var btns = document.getElementsByTagName("div")[2].getElementsByTagName("span");
+    var lis = document.getElementsByTagName("ul")[0].getElementsByTagName("li");
+    for(var i=0;i<btns.length;i++){
+        btns[i].index = i;
+        btns[i].onmouseover = function () {
+            for(var i=0;i<btns.length;i++){
+                btns[i].className = '';
+                lis[i].style.display = 'none';
+            }
+            btns[this.index].className = 'pink';
+            lis[this.index].style.display = 'block';
+        }
+    }
+</script>
