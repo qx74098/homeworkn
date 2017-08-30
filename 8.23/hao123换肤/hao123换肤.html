@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .yellow{
+            background: yellow;
+        }
+        .green{
+            background: green;
+        }
+        .pink{
+            background: pink;
+        }
+    </style>
+    <script>
+        /*
+        * 需求：
+        * 点击换肤按钮，页面整个背景颜色改变
+        */
+        /*在网页加载完成之后加载js效果*/
+        window.onload = function () {
+            /*获取元素名*/
+            var oBtn1 = document.getElementById("btn1");
+            var oBtn2 = document.getElementById("btn2");
+            var oBtn3 = document.getElementById("btn3")
+            var oBody = document.getElementById("body")
+            /*点击事件*/
+            oBtn1.onclick = function(){
+                /*将点击事件赋给body*/
+                oBody.className = "yellow";
+            }
+            oBtn2.onclick = function () {
+                oBody.className = "green";
+            }
+            oBtn3.onclick = function () {
+                oBody.className = "pink";
+            }
+        }
+    </script>
+</head>
+<body class="pink" id="body">
+    <form action="">
+        <input type="button" value="皮肤1" id="btn1">
+        <input type="button" value="皮肤2" id="btn2">
+        <input type="button" value="皮肤3" id="btn3">
+    </form>
+</body>
+</html>

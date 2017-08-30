@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        window.onload = function () {
+            var oBtn = document.getElementById('btn');
+            oBtn.onclick = show();
+            oBtn.onmouseover = show;
+            oBtn.onclick = function () {
+                show();
+            }
+            function show() {
+                alert('3333');
+            }
+        }
+    </script>
+</head>
+<body>
+<form action="">
+    <input type="button" value="按钮" id="btn">
+</form>
+</body>
+</html>
