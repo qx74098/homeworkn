@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="checkbox">
+<hr/>
+<input type="checkbox">
+<input type="checkbox">
+<input type="checkbox">
+<input type="checkbox">
+<input type="checkbox">
+</body>
+</html>
+<script>
+    var aInput = document.getElementsByTagName("input");
+    aInput[0].onclick = function () {
+        for(var i=1;i<aInput.length;i++){
+            if(aInput[0].checked == false){
+                aInput[i].checked = false;
+            }else{
+                aInput[i].checked = true;
+            }
+        }
+    }
+</script>

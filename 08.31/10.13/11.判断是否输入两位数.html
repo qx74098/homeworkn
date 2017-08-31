@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="text">
+<input type="button" id="btn" value="判断">
+</body>
+</html>
+<script>
+    var oText = document.getElementById("text");
+    var oBtn = document.getElementById("btn");
+    oBtn.onclick = function () {
+        var oVal = oText.value;
+        if(oVal>=10&&oVal<=99){
+            alert('两位数');
+        }else{
+            alert('不是两位数');
+        }
+    }
+</script>
